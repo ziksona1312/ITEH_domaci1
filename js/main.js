@@ -104,7 +104,28 @@ function obrisi(id1) {
 
 let tipSortiranja = 1;
 
+function sortirajPoKorisniku() {
+  const nizDogadjaja = [...document.getElementById("data").children];
 
+  nizDogadjaja.sort(function (a, b) {
+    const ime1 = a.children[4].innerHTML;
+    const ime2 = b.children[4].innerHTML;
+
+    let value = (ime1 > ime2) - (ime1 < ime2);
+    if (value == 0) value = -1;
+
+    return tipSortiranja * value;
+  });
+
+  tipSortiranja = tipSortiranja * -1;
+
+  const container = document.getElementById("data");
+  container.innerHTML = "";
+
+  for (let i = 0; i < nizDogadjaja.length; i++) {
+    container.appendChild(nizDogadjaja[i]);
+  }
+}
 
 const nizDogadjaja = [...document.getElementById("data").children];
 const container = document.getElementById("data");

@@ -1,0 +1,117 @@
+body{
+    background: linear-gradient(90deg, rgb(70, 54, 217) 0%, rgb(37, 146, 197) 43%, rgba(0,212,255,1) 100%);
+}
+  
+  
+h1, h2, h3, h4, h5, p, span, strike{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#task-container{
+    max-width:1200px;
+    margin:0 auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: #fff;
+    margin-top:100px;
+    margin-bottom:100px;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.form-bg{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    animation: blur .3s ease-out;
+}
+
+.form{
+    display: none;
+    background-color: rgb(186, 206, 255, 0.85) ;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    animation: createBox .3s ease-in-out;
+
+}
+
+.container{
+    max-width: 1200px;
+}
+
+#submit{
+    background-color: #36d9b6;
+    border-radius: 0;
+    border:0;
+    color: #fff;
+}
+
+.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 15px;
+}
+
+.task-wrapper{
+    margin:5px;
+    padding: 5px;
+    padding:20px;
+    border-bottom: 1px solid  #e9e9e9;
+}
+
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+
+.opis{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@keyframes blur {
+    from{
+        backdrop-filter: blur(0px); 
+        background-color: rgba(255, 255, 255, 0);
+    }
+    to{
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+    }
+}
+
+
+@keyframes createBox {
+    from {
+    transform: scale(0);
+    }
+    to {
+    transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+html {
+    font-size: 0.9em;
+}
+}
